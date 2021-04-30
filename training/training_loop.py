@@ -338,7 +338,8 @@ def training_loop(
                 for x in range(5):
                     grid_latents = np.random.randn(np.prod(grid_size), *G.input_shape[1:])
                     grid_fakes = Gs.run(grid_latents, grid_labels, is_validation=True, minibatch_size=sched.minibatch_gpu)
-                    misc.save_image_grid(grid_fakes, 'fractal_realities/results/fakes_' + str((cur_nimg // 1000)) + '_' + str(x) + str(random.random()) +'.png', drange=drange_net, grid_size=grid_size)
+                    misc.save_image_grid(grid_fakes, 'fractal_realities/dataset/fakes_' + str((cur_nimg // 1000)) + '_' + str(x) + str(random.random()) +'.png', drange=drange_net, grid_size=grid_size)
+                    # if x === 4 > upload op instagram of printen
 
             # pkl (snapshot)
             if network_snapshot_ticks is not None and (cur_tick % network_snapshot_ticks == 0 or done):
