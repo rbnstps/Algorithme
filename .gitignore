@@ -1,6 +1,6 @@
 /.stylegan2-cache/
 __pycache__/
-/fractal_realities/dataset/*
-/fractal_realities/tfrecords/*
+/assets/datasets/*
+/assets/tfrecords/*
 /dnnlib/tflib/_cudacache
 /results

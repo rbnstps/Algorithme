@@ -1,13 +1,12 @@
-echo "hallo"
+#!/bin/bash
 
-if added img detected
-    
+# while : 
+# do
+    source /opt/anaconda/anaconda3/etc/profile.d/conda.sh
+    conda activate ruben
+    echo ${CONDA_PREFIX}
 
-    #conversion
-    python dataset_tool.py create_from_images fractal_realities/tfrecords fractal_realities/dataset
-    
-    
-    #training
-    python run_training.py --num-gpus=1 --data-dir=fractal_realities/ --config=config-f --dataset=dataset --total-kimg 1 --gamma=1
+    echo "Training RUben face"
+    python run_training.py --num-gpus=1 --data-dir=assets/tfrecords/ --config=config-f --dataset=ruben --total-kimg 200 --gamma=1000
 
-    
+# done
