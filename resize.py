@@ -1,7 +1,7 @@
 import os
 from PIL import Image
 
-images = [file for file in os.listdir('../assets/datasets/ruben/') if file.endswith(('jpeg', 'png', 'jpg', 'JPG'))]
+images = [file for file in os.listdir('assets/datasets/dataset/') if file.endswith(('jpeg', 'png', 'jpg', 'JPG'))]
 
 def resize_and_crop(img_path, modified_path, size, crop_type='middle'):
     """
@@ -64,6 +64,6 @@ def resize_and_crop(img_path, modified_path, size, crop_type='middle'):
 
 for image in images:
     try:
-        resize_and_crop('../assets/datasets/ruben/' + image, '../assets/datasets/ruben_cropped/' + image, (1024, 1024))
+        resize_and_crop('assets/datasets/dataset/' + image, 'assets/datasets/ruub_cropped/' + image, (512, 512))
     except Exception:
         continue

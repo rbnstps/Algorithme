@@ -334,12 +334,14 @@ def training_loop(
                 autosummary('Timing/sec_per_kimg', tick_time / tick_kimg),
                 autosummary('Timing/maintenance_sec', maintenance_time),
                 autosummary('Resources/peak_gpu_mem_gb', peak_gpu_mem_op.eval() / 2**30)))
+            
             if image_snapshot_ticks is not None and done:
+                print('we gaan opslaan!!!')
                 for x in range(5):
                     grid_latents = np.random.randn(np.prod(grid_size), *G.input_shape[1:])
                     grid_fakes = Gs.run(grid_latents, grid_labels, is_validation=True, minibatch_size=sched.minibatch_gpu)
-                    misc.save_image_grid(grid_fakes, 'assets/datasets/ruben/fakes_' + str((cur_nimg // 1000)) + '_' + str(x) + str(random.random()) +'.png', drange=drange_net, grid_size=grid_size)
-                    # if x === 4 > upload op instagram of printen
+                    misc.save_image_grid(grid_fakes, 'assets/datasets/ruben_512/fakes_' + str((cur_nimg // 1000)) + '_' + str(x) + str(random.random()) +'.png', drange=drange_net, grid_size=grid_size)
+                    misc.save_image_grid(grid_fakes, 'assets/upload/fakes_' + str((cur_nimg // 1000)) + '_' + str(x) + str(random.random()) +'.png', drange=drange_net, grid_size=grid_size)
 
             # pkl (snapshot)
             if network_snapshot_ticks is not None and (cur_tick % network_snapshot_ticks == 0 or done):

@@ -3,3 +3,8 @@ command: python dataset_tool.py create_from_images assets/tfrecords/ruben/ asset
 
 2: Trainen -> train loop slaat afbeeldingen op in assets/datasets/ruben/ 
 command: python run_training.py --num-gpus=1 --data-dir=assets/tfrecords/ --config=config-f --dataset=ruben --total-kimg 200 --gamma=1000 
+
+
+VOlGENDE KEER:
+
+512,512 niet 1024,1024
