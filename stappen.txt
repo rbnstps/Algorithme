@@ -1,10 +1,18 @@
 1: Dataset naar TFRecords     
-command: python dataset_tool.py create_from_images assets/tfrecords/ruben/ assets/datasets/ruben/
+command: python dataset_tool.py create_from_images assets/tfrecords/ruben_512/ assets/datasets/ruben_512/
 
-2: Trainen -> train loop slaat afbeeldingen op in assets/datasets/ruben/ 
-command: python run_training.py --num-gpus=1 --data-dir=assets/tfrecords/ --config=config-f --dataset=ruben --total-kimg 200 --gamma=1000 
+2: Trainen -> train loop slaat afbeeldingen op in assets/datasets/ruben_512/ 
+command: python run_training.py --num-gpus=1 --data-dir=assets/tfrecords/ --config=config-f --dataset=ruben_512 --total-kimg 200 --gamma=1000 
+
+3: SCP Dataset folder -> Public images op VPS
 
 
-VOlGENDE KEER:
 
-512,512 niet 1024,1024
+
+
+Generatie 101..102..103 (naam)
+Timestamp van onstaan (geboren op)
+tijd vanaf timestamp (age)
+
+
+
