@@ -124,8 +124,8 @@ def training_loop(
     total_kimg              = 25000,    # Total length of the training, measured in thousands of real images.
     mirror_augment          = False,    # Enable mirror augment?
     drange_net              = [-1,1],   # Dynamic range used when feeding image data to the networks.
-    image_snapshot_ticks    = 400,      # How often to save image snapshots? None = only save 'reals.png' and 'fakes-init.png'.
-    network_snapshot_ticks  = 400,      # How often to save network snapshots? None = only save 'networks-final.pkl'.
+    image_snapshot_ticks    = 1,      # How often to save image snapshots? None = only save 'reals.png' and 'fakes-init.png'.
+    network_snapshot_ticks  = 1,      # How often to save network snapshots? None = only save 'networks-final.pkl'.
     save_tf_graph           = False,    # Include full TensorFlow computation graph in the tfevents file?
     save_weight_histograms  = False,    # Include weight histograms in the tfevents file?
     resume_pkl              = None,     # Network pickle to resume training from, None = train from scratch.
@@ -341,7 +341,7 @@ def training_loop(
                     grid_latents = np.random.randn(np.prod(grid_size), *G.input_shape[1:])
                     grid_fakes = Gs.run(grid_latents, grid_labels, is_validation=True, minibatch_size=sched.minibatch_gpu)
                     misc.save_image_grid(grid_fakes, 'assets/datasets/ruben_512/fakes_' + str((cur_nimg // 1000)) + '_' + str(x) + str(random.random()) +'.png', drange=drange_net, grid_size=grid_size)
-                    misc.save_image_grid(grid_fakes, 'assets/upload/fakes_' + str((cur_nimg // 1000)) + '_' + str(x) + str(random.random()) +'.png', drange=drange_net, grid_size=grid_size)
+                    misc.save_image_grid(grid_fakes, 'assets/upload/fakes_' + str((cur_nimg // 1000)) + '_' + str(x) +'.png', drange=drange_net, grid_size=grid_size)
 
             # pkl (snapshot)
             if network_snapshot_ticks is not None and (cur_tick % network_snapshot_ticks == 0 or done):
