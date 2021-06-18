@@ -124,8 +124,8 @@ def training_loop(
     total_kimg              = 25000,    # Total length of the training, measured in thousands of real images.
     mirror_augment          = False,    # Enable mirror augment?
     drange_net              = [-1,1],   # Dynamic range used when feeding image data to the networks.
-    image_snapshot_ticks    = 1,      # How often to save image snapshots? None = only save 'reals.png' and 'fakes-init.png'.
-    network_snapshot_ticks  = 1,      # How often to save network snapshots? None = only save 'networks-final.pkl'.
+    image_snapshot_ticks    = 1500,      # How often to save image snapshots? None = only save 'reals.png' and 'fakes-init.png'.
+    network_snapshot_ticks  = 1500,      # How often to save network snapshots? None = only save 'networks-final.pkl'.
     save_tf_graph           = False,    # Include full TensorFlow computation graph in the tfevents file?
     save_weight_histograms  = False,    # Include weight histograms in the tfevents file?
     resume_pkl              = None,     # Network pickle to resume training from, None = train from scratch.
@@ -161,7 +161,7 @@ def training_loop(
     G.print_layers(); D.print_layers()
     sched = training_schedule(cur_nimg=total_kimg*1000, training_set=training_set, **sched_args)
 
-    for x in range(5):
+    for x in range(4):
         # Generate initial image snapshots.
         grid_latents = np.random.randn(np.prod(grid_size), *G.input_shape[1:])
         grid_fakes = Gs.run(grid_latents, grid_labels, is_validation=True, minibatch_size=sched.minibatch_gpu)
@@ -337,7 +337,7 @@ def training_loop(
             
             if image_snapshot_ticks is not None and done:
                 print('we gaan opslaan!!!')
-                for x in range(5):
+                for x in range(4):
                     grid_latents = np.random.randn(np.prod(grid_size), *G.input_shape[1:])
                     grid_fakes = Gs.run(grid_latents, grid_labels, is_validation=True, minibatch_size=sched.minibatch_gpu)
                     misc.save_image_grid(grid_fakes, 'assets/datasets/ruben_512/fakes_' + str((cur_nimg // 1000)) + '_' + str(x) + str(random.random()) +'.png', drange=drange_net, grid_size=grid_size)
