@@ -14,7 +14,7 @@ Algorithm(e) acts as a proposed way to deal with this contradiction, and acts as
 
 
 ## Use Algorithm(e) yourself
-If you have some programming experience, and a good graphics card, you could use this repository to produce your own Algorithmic personality. If there are any issues, please let me know trough the issues tab of this repo. Add-ons or improvements to the sourcecode are also welcome. 
+If you have some programming experience, and a good graphics card, you could use this repository to produce your own Algorithmic personality. If there are any issues, please let me know trough the issues tab of this repo. Add-ons or improvements to the sourcecode are also welcome. Below you can learn more about using stylegan2 for creating generating faces. The run.sh file in this repo are the brains of running stylegan2 in feedback loop.  
 
 
 ## StyleGAN2 &mdash; Official TensorFlow Implementation
