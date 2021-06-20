@@ -17,12 +17,6 @@ Algorithm(e) acts as a proposed way to deal with this contradiction, and acts as
 If you have some programming experience, and a good graphics card, you could use this repository to produce your own Algorithmic personality. If there are any issues, please let me know trough the issues tab of this repo. Add-ons or improvements to the sourcecode are also welcome. 
 
 
-### Via this repository
-In this repo you can find all the neceserry source code for creating your own algorithmic personality. 
-
-### Via RunwayML
-
-
 ## StyleGAN2 &mdash; Official TensorFlow Implementation
 
 ![Teaser image](./docs/stylegan2-teaser-1024x256.png)
