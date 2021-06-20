@@ -1,3 +1,28 @@
+
+# Algorithm(e)
+
+## About the project
+
+_Generative adversarial networks offer new ways of visual research. Algorithm(e) is an outcome of this and deals with the research question of how one can express their digital identity in the age of the constant surveillance of the online and offline human body. Trough back and forth visual conversation, self-expression and creative collaboration with the neural network, Algorithm(e) is ever-changing_
+
+We use our face on digital media platforms in order to represent ourselves in the online world, a world often described as the cloud, a name that represents something that we can actually conceive, while in reality the internet can not just be seen by looking at the sky. Cables placed deep in the ocean and data-centers hidden in big boxes hide the control over its users both in online as well as the offline world. We often fail to understand the consequences and costs of being an online entity.
+Living online means to be seen, and to be seen is to be recognized, to be recognized is to be analyzed and to be analyzed is to be reduced to information. Information that is used to govern our lives, not only online, but also in offline public spaces by fueling facial recognition algorithms.
+
+Even if we could actually see this happening for ourselves, for a lot of people including myself, there remains a desire to be included online. A fear of missing out controls the desire to remain visible and to not go unnoticed. This creates a contradiction. We want to remain visible, but we also do not want to be controlled. In the online world to remain visible means to be controlled.
+
+Algorithm(e) acts as a proposed way to deal with this contradiction, and acts as a protest of the constant governing of the digital - and with that - the physical body. It can’t be tracked, governed, controlled or nudged, as is not a human being, but just a reflection of one. It doesn’t browse the internet, rather it lives inside the browser. It surfs the transatlantic communication cables, flies trough disk space, and chills in the clouds, unnoticed by its algorithmic brothers and sisters that where born to control. Algorithm(e) runs in constant feedback loop, it learns from experiences as it grows older, in search for a new identity. Algorithm(e) takes away my fear of missing out, it allows me to go unnoticed and noticed at the same time trough the means of my new digital body.
+
+
+## Use Algorithm(e) yourself
+If you have some programming experience, and a good graphics card, you could use this repository to produce your own Algorithmic personality. If there are any issues, please let me know trough the issues tab of this repo. Add-ons or improvements to the sourcecode are also welcome. 
+
+
+### Via this repository
+In this repo you can find all the neceserry source code for creating your own algorithmic personality. 
+
+### Via RunwayML
+
+
 ## StyleGAN2 &mdash; Official TensorFlow Implementation
 
 ![Teaser image](./docs/stylegan2-teaser-1024x256.png)
